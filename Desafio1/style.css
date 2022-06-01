@@ -1,0 +1,239 @@
+.body-container{
+    background-color: #E6E1C0;
+    
+}
+
+.header-container{
+    background-color: #3A3845;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 3fr;
+    margin: -50px -5px 0 -50px;
+    padding: 50px 50px 0 70px;
+    grid-template-areas: 
+    "grid1 none navBar";
+}
+
+.grid1{
+    grid-area: grid1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.MustClothes{
+    font-size: 1.5em;
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.75;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    text-decoration: none;
+    padding: 25px 0 25px 0;
+    margin: 0 20px 0 10px
+}
+
+.navBar{
+    grid-area: navBar;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.nav1{
+    font-family: 'Rubik', sans-serif;
+}
+
+.hombre{
+    text-decoration: none;
+    color: beige;
+}
+
+.hombre-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-areas:
+    ". hombreTitle .";
+    font-family: 'Rubik', sans-serif;
+    font-size: larger;
+}
+
+.hombreTitle{
+    grid-area: hombreTitle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mujer{
+    text-decoration: none;
+    color: beige;
+}
+
+.nav2{
+    font-family: 'Rubik', sans-serif;
+    grid-area: nav2;
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+.quieroVender{
+    font-size: small;
+    font-family:'Rubik', sans-serif;
+    font-weight: 500;
+    align-items: center;
+    text-decoration: none;
+    color: #E6E1C0;
+}
+
+.buscar{
+    background-color: #3A3845;
+    border-color: beige;
+    border-width: 1px;
+    color: beige;
+    width:200px;
+    height:25px;
+    border-radius:55px;
+    text-align: center;
+}
+
+input:focus{
+    background-color: #E6E1C0;
+    color: #3A3845;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+}
+
+.titles-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-areas: ". compray .";
+ }
+
+.compray{
+    grid-area: compray;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 1000;
+    font-size: larger;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.clothing-container{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-areas:
+    "showingLeft showingMid showingRight";
+}
+
+img{
+    transition: 1s, 1s;
+}
+
+img:hover{
+    height: 130%;
+}
+
+.img1{
+    display: flex;
+    justify-content: center;
+    grid-area: img1;
+    height: 400px;
+    width: auto;
+}
+
+.img2{
+    display: flex;
+    justify-content: center;
+    grid-area: img2;
+    height: 400px;
+    width: auto;
+}
+
+.img3{
+    display: flex;
+    justify-content: center;
+    grid-area: img3;
+    height: 400px;
+    width: auto;
+}
+
+.showing-container{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-areas:
+    "showingLeft showingMid . ."
+}
+.showingLeft{
+    grid-area: showingLeft;
+    font-family: 'Rubik', sans-serif;
+}
+
+.showingMid{
+    grid-area: showingMid;
+    font-family: 'Rubik', sans-serif;
+}
+
+.showingRight{
+    grid-area: showingRight;
+    font-family: 'Rubik', sans-serif;
+}
+
+.clothing{
+    display: flex;
+    font-weight: 800;
+    color: #7e7c67;
+    justify-content: center;
+}
+
+.price{
+    display: flex;
+    font-weight: 800;
+    color: #3A3845;
+    justify-content: center;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container{
+    background-color: #c0bb91;
+    height: 200px; width: auto;
+    margin: 100px -5px -50px 0px;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+    grid-template-areas: ". redes .";
+
+}
+
+.redes{
+    grid-area: redes;
+}
+
+.redes__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 1000;
+}
+
+.redes__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: smaller;
+}
+
+/*falta respo<
