@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+// import Button from './components/Button/Button'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola, bienvenido a la app
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar />
+        <ItemListContainer greeting = {'Hola, bienvenido a la app'} />
+        {/* <Button label={'Comprar'} background ='#0040ff' action={() => console.log('comprar')}/>
+        <Button label={'Vender'} background ='#867979' action={() => console.log('vender')}/> */}
     </div>
   );
 }
