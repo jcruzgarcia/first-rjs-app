@@ -1,0 +1,15 @@
+.productName{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+
+}
+
+.productPrice{
+    text-decoration: none;
+}

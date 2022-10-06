@@ -1,0 +1,28 @@
+.NavbarLogo {
+    text-decoration: none;
+    color: white;
+}
+
+.Navbar {
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+
+}
+.category {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.category:hover{
+    background-color: #003366;
+    padding: 7px;
+    border-radius: 5px;
+}
