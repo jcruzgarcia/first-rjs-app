@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react"
-import { getProducts } from '../../asyncMock'
+import { useState, useEffect, useContext } from "react"
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import { getProductsByCategory } from "../../asyncMock"
+import { NotificationContext } from "../../notification/Notification"
+import { getProducts } from '../../services/firebase/firestore'
 
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
@@ -10,28 +10,21 @@ const ItemListContainer = ({greeting}) => {
     const [loading, setLoading] =useState(true)
 
     const { categoryId } = useParams()
+    const { setNotification } = useContext(NotificationContext)
 
 
     useEffect(() => {
-        if (!categoryId) {
-        getProducts().then (res =>{
-            setProducts(res)
-        }).catch (error => {
-            setError(true)
-        }).finally (loading => {
+        setLoading(true)
+
+        getProducts(categoryId).then(products => {
+            setProducts(products)
+        }).catch(error => {
+            setError(error)
+            setNotification('Ha ocurrido un error')
+        }).finally(() => {
             setLoading(false)
         })
-    } else {
-        getProductsByCategory(categoryId).then (res =>{
-            setProducts(res)
-        }).catch (error => {
-            setError(true)
-        }).finally (loading => {
-            setLoading(false)
-        })
-    }
-        
-    },[categoryId])
+        }, [categoryId])
 
     if (loading) {
         return <h2 style= {{textAlign:"center", padding:"300px"}}>...</h2>
@@ -42,7 +35,7 @@ const ItemListContainer = ({greeting}) => {
     }
     
     return <div>
-                <h1 style= {{textAlign:"center", padding:"300px"}}>Hola, bienvenido a la app</h1>
+                <h1  style= {{textAlign:"center", padding:"300px"}}>{greeting}</h1>
                 <ItemList products={products}/>
         </div>
 }

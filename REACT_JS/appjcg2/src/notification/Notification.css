@@ -1,0 +1,18 @@
+.NotificationPopUp {
+    position: absolute;
+    background-color: rgb(74, 83, 74);
+    padding: 10px;
+    
+}
+
+.greenClass {
+    position: absolute;
+    background-color: rgb(45, 104, 45);
+    padding: 10px;
+}
+
+.redClass {
+    position: absolute;
+    background-color: rgb(179, 34, 34);
+    padding: 10px;
+}

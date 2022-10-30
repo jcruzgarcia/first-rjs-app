@@ -5,6 +5,9 @@ const Item = ({ product }) => {
     return (
 
             <Link to={`/detail/${product.id}`}>
+                <picture>
+                    <img src={product?.img} alt={product?.name} className="ItemImg"/>
+                </picture>
                 <li className='productName'>{product.name}</li>
                 <li className='productPrice'>${product.price}</li>
                 <div className='productDetailButton'>

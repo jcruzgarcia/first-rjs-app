@@ -1,7 +1,6 @@
-import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -12,9 +11,9 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className='categories'>
-                <Link to='/category/ropa' className='category'>Ropa</Link>
-                <Link to='/category/accesorios'className='category'>Accesorios</Link>
-                <Link to='/category/calzado' className='category'>Calzado</Link>
+                <NavLink to='/category/ropa' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Ropa</NavLink>
+                <NavLink to='/category/accesorios'className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesorios</NavLink>
+                <NavLink to='/category/calzado' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Calzado</NavLink>
             </div>
             <div>
                 <CartWidget />
